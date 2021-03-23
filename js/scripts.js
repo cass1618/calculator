@@ -1,31 +1,27 @@
-const sentence = prompt("Write a sentence.");
-
-const len = sentence.length;
-let firstChar = sentence.charAt(0);
-let lastChar = sentence.charAt(len-1);
-
-function capitalize (sentence){
-  
-  firstChar = firstChar.toUpperCase();
-  lastChar = lastChar.toUpperCase();
-  // return firstChar + lastChar
-  // return firstChar +sentence.substring(1,len-2)+lastChar
+function getSentence()
+{
+  const aSentence = prompt("Enter a sentence.");
+  const len = aSentence.length;
+  let firstChar = aSentence.charAt(0);
+  let lastChar = aSentence.charAt(len-1);
+  return [aSentence, len, firstChar, lastChar];
 }
 
-const newSentence = capitalize(sentence);
-// console.log(newSentence);
-
-function reverse(sentence) {
-  return lastChar + firstChar
+function capitalize ([a,b,c,d])
+{
+  c = c.toUpperCase();
+  d = d.toUpperCase();
+  return c + a.substring(1,b-1) + d;
 }
 
-const newLetters = reverse(newSentence)
-console.log(sentence + newLetters)
-
-function addMiddletoFront(sentence) {
-  let lenDiv2 = Math.floor(len/2);
-  return  middleChar = sentence.charAt(lenDiv2) + sentence +newLetters;
-
+function reverse ([a,b,c,d]) 
+{
+  return d + a.substring(1,b-1) + c;
 }
 
-console.log(addMiddletoFront(sentence));
+function addMiddletoFront([a,b,c,d]) 
+{
+  let lenDiv2 = Math.floor(b/2);
+  return 
+}
+
